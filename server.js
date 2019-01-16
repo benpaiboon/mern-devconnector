@@ -25,6 +25,7 @@ require('./config/passport')(passport);
 // Load Routes
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
+const posts = require('./routes/api/posts');
 
 app.get('/api', (req, res) => {
   res.json({ msg: "Welcome to DevConnector API." });
@@ -33,6 +34,7 @@ app.get('/api', (req, res) => {
 // Fired Routes
 app.use('/api/users', users);
 app.use('/api/profile', profile);
+app.use('/api/posts', posts);
 
 const port = process.env.PORT || 5000;
 
