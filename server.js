@@ -30,6 +30,7 @@ app.get('/api', (req, res) => {
   res.json({ msg: "Welcome to DevConnector API." });
 });
 
+// Fired Routes
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 
